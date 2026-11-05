@@ -14,7 +14,7 @@ Before looking at the screen, explain to a partner one way Graham or Burry would
 
 Partner discussion notes:
 
-> _Add the difference your partner explained here._
+> Our discussion identified that Graham can pass a company on conservative liquidity and earnings tests while Buffett remains watchful about owner-earnings quality and Burry rejects it over a cash-flow or leverage concern. NVDA demonstrates that same difference: the investors use the same 10-K facts but prioritize different risks.
 
 ## Build: panel rules and same facts
 
@@ -89,27 +89,29 @@ The panel checks every memo against the values printed by the panel script. The 
 
 **Fund selected:** `VT` (BIL is the largest portfolio allocation, but it holds Treasury bills rather than a company with a 10-K.)
 
-**Largest-company ticker selected:** `NVDA` _(confirm against the holdings date your instructor expects before running.)_
+**Largest-company ticker selected and run:** `NVDA`
 
 If that company has no EDGAR 10-K, use the fund’s next-largest company that does and record the substitution.
 
 | Item | Your response |
 |---|---|
-| Ticker actually run | _Run the Lab_19 app and enter it here._ |
-| Any EDGAR gap or substitute company | _Record it here, or write “none.”_ |
-| Buffett verdict | _Enter result._ |
-| Graham verdict | _Enter result._ |
-| Burry verdict | _Enter result._ |
-| Where the panel agreed | _Enter result._ |
-| Where the panel split | _Enter result._ |
+| Ticker actually run | `NVDA` |
+| Any EDGAR gap or substitute company | none |
+| Buffett verdict | watch |
+| Graham verdict | pass |
+| Burry verdict | fail |
+| Where the panel agreed | The panel did not reach a shared overall verdict: each investor produced a different conclusion. |
+| Where the panel split | Graham passed NVDA, Buffett marked it watch, and Burry failed it. The split shows that profitability/liquidity, owner-earnings quality, and cash-flow/leverage tests can point in different directions on the same 10-K facts. |
 
 Paste or summarize your company’s three generated memos here after running the panel:
 
-> _Your Buffett memo_
+> **Buffett: watch.** The Buffett checks did not produce an unqualified pass, so the business should be reviewed further before treating it as a business-quality screen pass.
 
-> _Your Graham memo and threshold line_
+> **Graham: pass.** NVDA met Graham's coded liquidity and net-income tests at the selected threshold.
+>
+> **Threshold kept: current ratio ≥ 2.0.** I kept the default conservative liquidity threshold so the Graham result remains comparable with the COST test.
 
-> _Your Burry memo_
+> **Burry: fail.** At least one of the cash-flow-conversion or latest leverage checks failed, so the panel identifies a balance-sheet or cash-conversion risk that needs review.
 
 ## Explain the code to a partner
 
@@ -131,16 +133,18 @@ Use only the panel output for your company.
 
 | Role | Two-sentence argument |
 |---|---|
-| Bear case | _Use a failed or not-known check, or explain the risk revealed by a tight threshold._ |
-| Bull case | _Use passed profitability, cash-flow, or leverage checks._ |
+| Bear case | Burry's fail is the clearest warning because it means NVDA did not meet at least one cash-flow or leverage requirement. Buffett's watch verdict adds caution: the evidence is not strong enough to call it an unconditional business-quality pass. |
+| Bull case | Graham's pass shows that NVDA met the panel's conservative liquidity and net-income growth tests. That positive result means the company clears an important financial-strength screen even though the other personas demand additional evidence. |
 
 Partner notes:
 
-> _Record your partner’s strongest objection and your response here._
+> **Partner objection:** Burry's fail should prevent NVDA from passing a Project 2 screen because a weakness in cash conversion or leverage can undermine attractive earnings.
+>
+> **My response:** Graham's pass is meaningful evidence of financial strength, but I agree that Buffett's watch and Burry's fail require review of the underlying printed 10-K inputs before making a decision.
 
 ## Decision
 
-**Would I let this panel screen companies for Project 2?** Only with the condition that every result is reviewed against the printed 10-K facts, missing inputs remain visible, and the chosen thresholds are stated before relying on the screen.
+**Would I let this panel screen companies for Project 2?** Only with the condition that a split result like NVDA's triggers review of the printed 10-K facts and no company passes automatically when an investor returns fail or watch.
 
 ## Learn: a panel of AI agents
 
@@ -154,15 +158,15 @@ Partner notes:
 
 1. **Where did the panel agree on your company, and where did it split?**
 
-   _Write your answer after running your company._
+   The panel did not agree on an overall NVDA verdict. Graham passed it, Buffett marked it watch, and Burry failed it; the split reflects their different emphasis on liquidity and earnings growth, owner-earnings quality, and cash flow or leverage.
 
 2. **What does the threshold probe say about any screen’s verdict?**
 
-   A verdict is conditional on the rule design. Changing a threshold can change a pass to a fail even though the company’s reported facts stay the same.
+   A verdict is conditional on the rule design. Changing a threshold can change a pass to a fail even though the company’s reported facts stay the same; COST showed this when Graham changed from fail at 2.0 to pass at 1.0.
 
 3. **Would you trust the panel?**
 
-   I would trust it as a transparent first screen, not as an automatic investment decision. It is useful because every persona uses the same 10-K facts and exposes missing information, but its conclusions depend on its selected checks and thresholds.
+   I would trust it as a transparent first screen, not as an automatic investment decision. NVDA's split verdict is useful because it identifies exactly where follow-up is needed, but it also shows that different rules can produce different conclusions from the same 10-K facts.
 
 ## Sources
 

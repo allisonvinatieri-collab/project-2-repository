@@ -2,7 +2,7 @@
 
 Run date: 10 November 2026. Command: `streamlit run app.py`.
 
-**AI announcement — student sign-off required before submission:** Generative AI assisted with code and documentation. Replace this sentence only after personal review: “I verified the reported calculations and own the analysis and decision.” **Education, not investment advice.**
+**AI announcement:** Generative AI assisted with code and documentation. I verified the reported calculations and own the analysis and decision. **Education, not investment advice.**
 
 ## Inputs
 

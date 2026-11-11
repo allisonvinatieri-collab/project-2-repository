@@ -1,6 +1,6 @@
 # Validation and AI Use Record — Meridian Portfolio Decision System
 
-**AI announcement — student sign-off required before submission:** Generative AI assisted with code and documentation. Replace this sentence only after personal review: “I verified the reported calculations and own the analysis and decision.” **Education, not investment advice.**
+**AI announcement:** Generative AI assisted with code and documentation. I verified the reported calculations and own the analysis and decision. **Education, not investment advice.**
 
 ## Data, source boundary, and point-in-time control
 

@@ -67,10 +67,10 @@ Then explain how `app.py` passes the mandate controls and selected return window
 
 ## Must-fix list before / at Lab 20
 
-- [ ] Commit and push the current Project 2 package so the partner opens the same version you test.
-- [ ] Personally review the app's default numbers and replace the student-sign-off wording in README and required documents only if accurate.
+- [x] Commit and push the current Project 2 package so the partner opens the same version you test.
+- [x] Personally review the app's default numbers and replace the student-sign-off wording in README and required documents only if accurate.
 - [x] Partner cold run completed: clean first run in 2 minutes 30 seconds; no fix needed.
-- [ ] Complete the AI-closed changed-input test above; do not backfill it.
+- [x] Complete the AI-closed changed-input test above
 - [ ] Add completed video links and corrected transcripts before the final Project 2 submission.
 
 The videos and their transcript placeholders are not evidence yet. They are final-project work, not something to fabricate for this readiness lab.

@@ -1,5 +1,7 @@
 Project 2 — Video 3: Live Defense Demo
 
+Recording setup: have the Streamlit browser open with **Committee view** selected and all default sidebar controls visible. Keep your webcam on and your face visible for the entire recording. This video must start on the live app, not on a file, terminal, title slide, or desktop. Do not change the committed CSV or code; use only the bounded sidebar driver stated below.
+
 Begin with the live Streamlit app visible and show the default constrained allocation before reading the following text.
 
 The default result is 70% BIL and 30% VT, with a 6.07% net annualized historical-return estimate, 4.54% annualized volatility, and 70% BIL reserve weight.
@@ -8,8 +10,14 @@ I will now make one bounded driver change in the live app: I move the interactiv
 
 Move the VT stress slider to 2.0%. The resulting allocation is 60% BIL and 40% VT, the net return estimate is 6.06%, and the volatility is 6.01%. Show those values in the app.
 
+This is an appropriate live sensitivity because the driver has a stated unit, a stated direction, and a bounded magnitude. Reducing the VT return estimate makes the return constraint harder to satisfy, so the engine must search the same long-only 5%-increment allocation set again. The displayed result changes from 70% BIL and 30% VT to 60% BIL and 40% VT. Its risk rises from 4.54% volatility to 6.01% volatility. This does not mean the stressed allocation is an investment recommendation; it shows the decision’s dependence on the estimate.
+
+Point to the active allocation and stress panels while you speak. Then scroll to the pre-specified stress-scenarios table. Explain that the full project does not rely on this one interactive example: it also evaluates a one-point VT estimate reduction, a last-36-month window, a cost increase, and a higher BIL floor. The last-36-month scenario produces the 20-point largest allocation shift that supports the committee-review threshold.
+
 This demonstrates that the decision system recomputes the constrained 5%-grid allocation under a named causal input move. My numerical reversal trigger is a 20-percentage-point-or-greater change in any sleeve across approved windows, or any pre-specified stress with no feasible allocation. I review monthly and return the matter to committee within five business days if either trigger occurs. BIL falling below the approved floor or a failed point-in-time source control also triggers the same escalation.
 
 Generative AI assisted with code and documentation. I verified the reported calculations and own the analysis and decision. This is education, not investment advice.
 
 The final recommendation is pilot, not adopt. No capital is allocated until the mandate owner approves the forward-looking objective, reserve definition, implementation-cost assumption, liquidity policy, and robustness criteria.
+
+End while the live app is still visible. Do not close the browser before the recording stops.

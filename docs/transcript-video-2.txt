@@ -1,15 +1,29 @@
 Project 2 — Video 2: Validation, Reproducibility, and Data Control
 
+Recording setup: keep your webcam on and face visible. Start in your code editor or File Explorer at the repository root so the reviewer can see `README.md`, `requirements.txt`, `app.py`, `Lab_15_portfolio.py`, `Lab_15_prices.csv`, `ALFRED_CPIAUCSL_vintages.csv`, `tests/test_project2.py`, and the `docs` folder. Open the files named below as you discuss them. This video is the evidence and code-defense video, so a terminal window is appropriate.
+
 Generative AI assisted with code and documentation. I verified the reported calculations and own the analysis and decision. This is education, not investment advice.
 
 The repository has one runnable entry point, app.py, a README with clean-environment instructions, pinned runtime dependencies in requirements.txt, committed input CSVs, and standard-library regression tests in tests/test_project2.py.
 
 The README known answer is 70% BIL and 30% VT, 6.07% net annualized historical return, 4.54% annualized volatility, and 70% BIL at the default settings. Running python -m unittest discover -s tests -v verifies that known answer, verifies the one-point VT stress known answer, rejects an invalid BIL floor, and verifies the point-in-time CPI control.
 
+Open `README.md` and scroll through the Run locally section. Show the exact clean-environment sequence: create the virtual environment, activate it, install `requirements.txt`, run the tests, and start `streamlit run app.py`. Then show the Reproducibility check at the bottom of the README. This makes the expected result visible before any program is run.
+
+Open `tests/test_project2.py`. The default-known-answer test protects the project’s central headline number. It reads the committed price file and requires the engine to return 70% BIL, 30% VT, 6.07% net return, 4.54% volatility, and 70% BIL. The next test protects the final-engine one-point VT stress result. The test suite also proves an invalid reserve floor is rejected and that the CPI data gate excludes information unavailable on the selected decision date.
+
+Open a terminal in the repository root and run `python -m unittest discover -s tests -v`. Leave the passing result visible briefly. State that all five tests pass. Do not edit any input or file while the test run is on screen.
+
 For the final 5%-increment engine, reducing the annualized VT return estimate by one percentage point changes the selected allocation to 65% BIL and 35% VT. The resulting net return estimate is 6.11% and volatility is 5.28%. This is the engine result used in the memo and visible-output record.
 
 The engine checks the price CSV schema, order of dates, duplicate dates, and missing values before calculating monthly returns, annualized arithmetic mean returns, annualized volatility, and correlations. The source limitation is explicit: the committed sample is a limited historical sample and is not independently vendor-verified by this app.
 
+Open `Lab_15_portfolio.py`. In `estimates_from_prices`, point out that the program requires `Date` as the first column, parses the dates, requires dates to be oldest first, and rejects duplicate dates or missing values. It converts monthly prices to monthly percentage returns, computes each asset’s arithmetic annualized return as average monthly return times 12, computes volatility as monthly standard deviation times the square root of 12, and computes the correlation matrix from those monthly returns.
+
+Still in `Lab_15_portfolio.py`, show `lowest_risk_mix`. Explain that it enumerates long-only allocations in 5% increments that sum to 100%, rejects candidates below the required return objective or BIL reserve floor, computes volatility for feasible candidates, and retains the feasible candidate with the lowest volatility. That is the exact decision rule implemented in the live app.
+
 The point-in-time inflation panel is a monitoring control, not an optimizer input. When the decision date is 30 September 2026, the latest available value is August 2026 CPI at 334.131, published on 11 September 2026. September CPI is excluded because its publication date, 14 October 2026, is after the decision date.
 
 The validation record also contains the immutable pre-run commit f4f8368 for the changed-input test and a partner's 17 November 2026 clean cold run. The changed BIL floor from 10% to 20% did not alter the selected allocation because the existing 70% BIL allocation already exceeded both floors; the record states that the original directional prediction did not match the outcome.
+
+Finish by opening `docs/validation-and-ai-use.md` and then `SUBMISSION_MANIFEST.md`. Show that the validation record documents the data boundary, observed tests, limitations, AI disclosure, cold run, and locked changed-input record. The manifest maps every required repository artifact to its verification method.

@@ -1,1 +1,15 @@
-[Add the corrected transcript for Video 2 after recording. Include the AI announcement and education-not-advice statement at the opening.]
+Project 2 — Video 2: Validation, Reproducibility, and Data Control
+
+Generative AI assisted with code and documentation. I verified the reported calculations and own the analysis and decision. This is education, not investment advice.
+
+The repository has one runnable entry point, app.py, a README with clean-environment instructions, pinned runtime dependencies in requirements.txt, committed input CSVs, and standard-library regression tests in tests/test_project2.py.
+
+The README known answer is 70% BIL and 30% VT, 6.07% net annualized historical return, 4.54% annualized volatility, and 70% BIL at the default settings. Running python -m unittest discover -s tests -v verifies that known answer, verifies the one-point VT stress known answer, rejects an invalid BIL floor, and verifies the point-in-time CPI control.
+
+For the final 5%-increment engine, reducing the annualized VT return estimate by one percentage point changes the selected allocation to 65% BIL and 35% VT. The resulting net return estimate is 6.11% and volatility is 5.28%. This is the engine result used in the memo and visible-output record.
+
+The engine checks the price CSV schema, order of dates, duplicate dates, and missing values before calculating monthly returns, annualized arithmetic mean returns, annualized volatility, and correlations. The source limitation is explicit: the committed sample is a limited historical sample and is not independently vendor-verified by this app.
+
+The point-in-time inflation panel is a monitoring control, not an optimizer input. When the decision date is 30 September 2026, the latest available value is August 2026 CPI at 334.131, published on 11 September 2026. September CPI is excluded because its publication date, 14 October 2026, is after the decision date.
+
+The validation record also contains the immutable pre-run commit f4f8368 for the changed-input test and a partner's 17 November 2026 clean cold run. The changed BIL floor from 10% to 20% did not alter the selected allocation because the existing 70% BIL allocation already exceeded both floors; the record states that the original directional prediction did not match the outcome.

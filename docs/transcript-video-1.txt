@@ -1,1 +1,13 @@
-[Add the corrected transcript for Video 1 after recording. Include the AI announcement and education-not-advice statement at the opening.]
+Project 2 — Video 1: Decision and App Walkthrough
+
+Generative AI assisted with code and documentation. I verified the reported calculations and own the analysis and decision. This is education, not investment advice.
+
+This is my Project 2 Portfolio Mandate and Stress-Test Decision System. My committee recommendation is pilot, not adopt. The current investable allocation is zero until the mandate owner approves the forward-looking return objective, the BIL reserve definition, implementation costs, and robustness criteria.
+
+The app uses the committed monthly adjusted-price sample for BIL, IEF, LQD, and VT from November 2021 through October 2026. The active mandate is a 6.0% net annualized historical-return objective, a 10% minimum BIL reserve weight, and a 0.0% annual implementation-cost assumption. The search is long only and evaluates allocations in 5% increments.
+
+With the default inputs, the constrained search selects 70% BIL and 30% VT, with 0% IEF and 0% LQD. Its net annualized historical-return estimate is 6.07%, annualized volatility is 4.54%, and BIL weight is 70%. The result passes the classroom historical-return and reserve rules, but it is not a forecast or an authorization to trade.
+
+The comparison table shows equal weight, inverse volatility, and the constrained search. The first two are baselines; the constrained result is selected because it is the lowest-volatility allocation that meets both active constraints.
+
+The decision remains pilot, not adopt because the result is sensitive to the estimation window and because costs, liquidity, taxes, rebalancing, and forward performance are not modeled. I review the pilot at every month-end and return it to committee review within five business days if a stress has no feasible allocation, a sleeve changes by 20 percentage points or more across approved windows, BIL falls below the approved floor, or point-in-time data control fails.

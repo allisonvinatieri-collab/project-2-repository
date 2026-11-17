@@ -20,6 +20,7 @@ Requires Python 3.11+.
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
+python -m unittest discover -s tests -v
 streamlit run app.py
 ```
 
@@ -37,7 +38,9 @@ Open the local URL Streamlit prints. No API keys, network calls, or external dow
 | `docs/decision-memo.md` | Committee recommendation and conditions. |
 | `docs/validation-and-ai-use.md` | Data, validation, limitations, AI-use record, and Locked Changed-Input Record. |
 | `docs/visible-output.md` | Executed default-run inputs and results viewable without starting the app. |
-| `docs/transcript-video-*.txt` | Corrected transcripts to add after recording the three required videos. |
+| `docs/transcript-video-*.txt` | Complete recording scripts for the three required videos; use them while recording and retain the final spoken transcripts. |
+| `tests/test_project2.py` | Automated regression and data-control tests for the final engine. |
+| `SUBMISSION_MANIFEST.md` | Required-artifact checklist and final submission map. |
 
 ## Mandate
 
@@ -56,4 +59,4 @@ Open the local URL Streamlit prints. No API keys, network calls, or external dow
 
 ## Reproducibility check
 
-With the defaults (all available returns, 6.0% objective, 10% BIL floor), the constrained search should return 70% BIL / 30% VT, a 6.07% annualized historical-return estimate, 4.54% annualized volatility, and 70% BIL. The complete validation record is in [docs/validation-and-ai-use.md](docs/validation-and-ai-use.md).
+With the defaults (all available returns, 6.0% net objective, 10% BIL floor, and 0.0% annual cost), the constrained search should return 70% BIL / 30% VT, a 6.07% net annualized historical-return estimate, 4.54% annualized volatility, and 70% BIL. The complete validation record is in [docs/validation-and-ai-use.md](docs/validation-and-ai-use.md).

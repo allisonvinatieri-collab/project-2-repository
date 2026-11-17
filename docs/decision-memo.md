@@ -25,7 +25,7 @@ The equal-weight and inverse-volatility baselines are displayed alongside the co
 
 ## Evidence and stress result
 
-When the sample changes from all available observations to the last 36 monthly returns, the lowest-risk feasible allocation changes from 70% BIL / 30% VT to 85% BIL / 5% LQD / 10% VT. The largest individual allocation change is 20 percentage points. In the one-point return-estimate stress, reducing VT's annualized historical-return estimate by one percentage point produces a feasible but different portfolio: 66% BIL / 34% VT, with a 6.04% historical-return estimate and 5.13% volatility.
+When the sample changes from all available observations to the last 36 monthly returns, the lowest-risk feasible allocation changes from 70% BIL / 30% VT to 85% BIL / 5% LQD / 10% VT. The largest individual allocation change is 20 percentage points. In the one-point return-estimate stress, reducing VT's annualized historical-return estimate by one percentage point produces a feasible but different portfolio: 65% BIL / 35% VT, with a 6.11% historical-return estimate and 5.28% volatility. The 5%-increment constraint explains why the selected mix changes in 5-point steps.
 
 The point-in-time CPI panel is a monitoring control rather than an optimizer input. It permits an observation only after its recorded publication date, preventing the use of an inflation release that was not knowable on the decision date.
 
@@ -39,6 +39,10 @@ Do not move from pilot to an investable allocation until all of the following ar
 4. Pre-register and execute the Locked Changed-Input Record in the validation file.
 
 Return the process to committee review—and stop any pilot—if a reasonable stress produces no feasible allocation, the selected mix shifts materially across approved windows, the BIL floor is breached, a source cannot be traced as of its decision date, or realized operating conditions materially differ from the assumed cost/liquidity conditions.
+
+## Numeric reversal thresholds and review timing
+
+Review the pilot at every month-end. Return it to committee review within five business days if any pre-specified stress produces no feasible 5%-grid allocation or if any sleeve differs by **20 percentage points or more** across approved windows. Also stop the pilot within five business days if BIL is below the approved floor or the point-in-time source control fails. These are governance triggers, not trading instructions.
 
 ## Principal limitations
 

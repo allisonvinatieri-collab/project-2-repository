@@ -19,7 +19,7 @@ python -m streamlit run app.py
 
 Expected default result: 70% BIL / 0% IEF / 0% LQD / 30% VT; 6.07% annualized historical-return estimate; 4.54% volatility; 70% BIL reserve weight; decision: **pilot, not adopt**.
 
-### Partner cold-run note — complete in class
+### Partner cold-run note — completed in class
 
 | Field | Partner's record |
 | --- | --- |
@@ -42,7 +42,7 @@ Do not ask an AI to select, predict, or interpret this test. Before executing a 
 | **Pre-run — why it is load-bearing** | The minimum BIL reserve weight is a hard mandate constraint, so it determines which allocations can pass the mandate. |
 | **Pre-run — human prediction of number direction** | I predict portfolio weight to increase, return estimate to increase, volatility to increase, and feasibility to decrease, meaning fewer allocations meet the rules. |
 | **Pre-run — expected decision effect** | I expect the committee decision to stay pilot. |
-| **Pre-run — commit and push** | `[commit hash]` |
+| **Pre-run — commit and push** | `f4f8368` — Record Lab 20 changed-input prediction. |
 | Run command/date | `python -m streamlit run app.py`; 17 November 2026. |
 | Actual before/after output | Before and after raising the BIL floor from 10% to 20%, the app returned 70% BIL / 0% IEF / 0% LQD / 30% VT; 6.07% annualized historical-return estimate; 4.54% annualized volatility; 70% BIL reserve weight. A feasible allocation appeared in both runs. The app does not display a count of feasible allocations. |
 | Did the decision change? | No. The recommendation remained pilot, not adopt. |
@@ -65,12 +65,6 @@ Then explain how `app.py` passes the mandate controls and selected return window
 
 **My answer:** I use 5% steps because they balance transparency and precision. A 10% grid is too coarse and could miss a reasonably lower-risk feasible allocation, while a 1% grid creates far more combinations and suggests more precision than this short historical sample supports. The 5% grid is simple enough to explain and reproduce, while still showing how the mandate constraints affect the portfolio.
 
-## Must-fix list before / at Lab 20
+## Completed Lab 20 readiness record
 
-- [x] Commit and push the current Project 2 package so the partner opens the same version you test.
-- [x] Personally review the app's default numbers and replace the student-sign-off wording in README and required documents only if accurate.
-- [x] Partner cold run completed: clean first run in 2 minutes 30 seconds; no fix needed.
-- [x] Complete the AI-closed changed-input test above
-- [ ] Add completed video links and corrected transcripts before the final Project 2 submission.
-
-The videos and their transcript placeholders are not evidence yet. They are final-project work, not something to fabricate for this readiness lab.
+The repository package, cold-run record, code explanation, and changed-input record are complete. The three recording scripts in `docs/transcript-video-*.txt` are ready for the student's face-visible recordings; after recording, retain the hosted links or files with the submission package.

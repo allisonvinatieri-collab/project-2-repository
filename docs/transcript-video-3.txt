@@ -1,1 +1,15 @@
-[Add the corrected transcript for Video 3 after recording. Start with the live app demo, then include the AI announcement and education-not-advice statement.]
+Project 2 — Video 3: Live Defense Demo
+
+Begin with the live Streamlit app visible and show the default constrained allocation before reading the following text.
+
+The default result is 70% BIL and 30% VT, with a 6.07% net annualized historical-return estimate, 4.54% annualized volatility, and 70% BIL reserve weight.
+
+I will now make one bounded driver change in the live app: I move the interactive VT return-estimate reduction from 1.0 percentage point to 2.0 percentage points. This changes only the displayed VT return-estimate stress; it does not alter the committed historical CSV or the base result.
+
+Move the VT stress slider to 2.0%. The resulting allocation is 60% BIL and 40% VT, the net return estimate is 6.06%, and the volatility is 6.01%. Show those values in the app.
+
+This demonstrates that the decision system recomputes the constrained 5%-grid allocation under a named causal input move. My numerical reversal trigger is a 20-percentage-point-or-greater change in any sleeve across approved windows, or any pre-specified stress with no feasible allocation. I review monthly and return the matter to committee within five business days if either trigger occurs. BIL falling below the approved floor or a failed point-in-time source control also triggers the same escalation.
+
+Generative AI assisted with code and documentation. I verified the reported calculations and own the analysis and decision. This is education, not investment advice.
+
+The final recommendation is pilot, not adopt. No capital is allocated until the mandate owner approves the forward-looking objective, reserve definition, implementation-cost assumption, liquidity policy, and robustness criteria.

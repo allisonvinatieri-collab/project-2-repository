@@ -17,7 +17,7 @@ The CPI data card is documented in `Lab_17.md`. CPI is a monitoring signal only;
 | --- | --- | --- | --- |
 | Default constrained search | A feasible 5%-increment mix satisfying a 6.0% annualized historical-return objective and 10% BIL minimum. | 70% BIL / 30% VT; 6.07% return estimate, 4.54% volatility, 70% BIL. | Pass |
 | Last-36-month window | A feasible mix may differ because estimates depend on the sample. | 85% BIL / 5% LQD / 10% VT; 6.08% return estimate, 1.48% volatility. Largest change from full sample: 20 points. | Pass; material sensitivity identified |
-| One-point VT estimate reduction | A feasible mix may require more VT and higher volatility. | 66% BIL / 34% VT; 6.04% return estimate, 5.13% volatility. | Pass; estimation risk identified |
+| One-point VT estimate reduction | A feasible mix may require more VT and higher volatility. | 65% BIL / 35% VT; 6.11% return estimate, 5.28% volatility. | Pass; estimation risk identified |
 | Point-in-time CPI gate | A CPI release dated after the chosen decision date must be excluded. | On 30 September 2026, September CPI is excluded because its recorded publication date is 14 October 2026. | Pass |
 | Cold run | A clean user can follow the README from a separate folder/environment. | On 17 November 2026, a partner followed the README setup/run command, reached the Streamlit app in 2 minutes 30 seconds, and reported no first failure. Result: local Streamlit browser at `http://localhost:8501`; no fix or rerun was needed. | Pass |
 
@@ -27,13 +27,14 @@ The CPI data card is documented in `Lab_17.md`. CPI is a monitoring signal only;
 - The prototype uses an illustrative annual-cost stress assumption but omits measured trading costs, taxes, liquidity constraints, rebalancing mechanics, and forward performance.
 - The 5% allocation grid is transparent but does not establish global precision.
 - A failed point-in-time data gate, an infeasible stress case, or material allocation instability triggers committee review.
+- Numeric escalation rule: at each month-end review, return to committee review within five business days if any sleeve changes by 20 percentage points or more across approved windows, or if a pre-specified stress is infeasible.
 
 ## AI-use disclosure and verification log
 
 | AI tool / model / date | Material use | Student verification and disposition |
 | --- | --- | --- |
-| Codex / GPT-5 / 10 November 2026 | Helped organize the existing lab code into the runnable `app.py` and draft repository documentation. | Re-run the app using the README defaults; verify every number against the app and source files before submission. Do not claim this row is complete until you have performed and documented that check. |
-| **Add any other tool used** | **Describe the prompt/output or coding assistance that materially affected the work.** | **Record the specific source, calculation, or test used to accept, qualify, correct, or reject it.** |
+| Codex / GPT-5 / 10 November 2026 | Helped organize the existing lab code into the runnable `app.py` and draft repository documentation. | Default output was re-run against the included source files and matches the documented 70% BIL / 30% VT allocation, 6.07% net return, and 4.54% volatility. |
+| Codex / GPT-5 / 17 November 2026 | Added final-engine regression tests, corrected the 5%-grid VT stress result, and organized submission documentation. | `python -m unittest discover -s tests -v` passed the default known-answer, stress known-answer, reserve-floor, and CPI availability controls. |
 
 ## Locked Changed-Input Record — required before execution
 

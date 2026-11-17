@@ -27,7 +27,7 @@ Expected default result: 70% BIL / 0% IEF / 0% LQD / 30% VT; 6.07% annualized hi
 | Date/time | 17 November 2026, during Lab 20 |
 | Command used | README setup and run command: `python -m venv .venv`; `.\.venv\Scripts\Activate.ps1`; `python -m pip install -r requirements.txt`; `python -m streamlit run app.py` |
 | First failure, if any | None |
-| Elapsed time | 20 seconds |
+| Elapsed time | 2 minutes 30 seconds |
 | Where the result appeared | Streamlit app in the local browser (`http://localhost:8501`) |
 | Fix made and pushed, or clean-run note | Clean cold run; no fix needed. |
 | Rerun outcome | Not needed; first run reached the result. |
@@ -67,7 +67,7 @@ Then explain how `app.py` passes the mandate controls and selected return window
 
 - [ ] Commit and push the current Project 2 package so the partner opens the same version you test.
 - [ ] Personally review the app's default numbers and replace the student-sign-off wording in README and required documents only if accurate.
-- [x] Partner cold run completed: clean first run in 20 seconds; no fix needed.
+- [x] Partner cold run completed: clean first run in 2 minutes 30 seconds; no fix needed.
 - [ ] Complete the AI-closed changed-input test above; do not backfill it.
 - [ ] Add completed video links and corrected transcripts before the final Project 2 submission.
 

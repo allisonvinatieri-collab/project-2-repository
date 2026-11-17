@@ -74,8 +74,8 @@ def render_mix(result):
 
 
 def main() -> None:
-    st.set_page_config(page_title="Meridian Portfolio Decision System", layout="wide")
-    st.title("Meridian Portfolio Decision System")
+    st.set_page_config(page_title="Project 2: Portfolio Mandate & Stress-Test Decision System", layout="wide")
+    st.title("Project 2: Portfolio Mandate & Stress-Test Decision System")
     st.caption(
         "AI announcement: Generative AI assisted with code and documentation; the student must verify "
         "all results and owns the analysis and decision. Education, not investment advice."

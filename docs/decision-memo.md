@@ -1,4 +1,4 @@
-# Decision Memo — Meridian Portfolio Decision System
+# Decision Memo: Project 2 Portfolio Mandate & Stress-Test Decision System
 
 **AI announcement:** Generative AI assisted with code and documentation. I verified the reported calculations and own the analysis and decision. **Education, not investment advice.**
 

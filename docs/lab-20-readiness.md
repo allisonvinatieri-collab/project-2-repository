@@ -61,7 +61,9 @@ Open `Lab_15_portfolio.py` and explain `lowest_risk_mix` to your partner:
 
 Then explain how `app.py` passes the mandate controls and selected return window into this function. Record the one question your partner asks:
 
-`[partner question and your answer]`
+**Catie Moe's question:** Why do you return the lowest-volatility feasible long-only allocation in 5% steps, instead of 1% or 10% steps?
+
+**My answer:** I use 5% steps because they balance transparency and precision. A 10% grid is too coarse and could miss a reasonably lower-risk feasible allocation, while a 1% grid creates far more combinations and suggests more precision than this short historical sample supports. The 5% grid is simple enough to explain and reproduce, while still showing how the mandate constraints affect the portfolio.
 
 ## Must-fix list before / at Lab 20
 

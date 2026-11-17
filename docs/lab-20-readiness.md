@@ -23,14 +23,14 @@ Expected default result: 70% BIL / 0% IEF / 0% LQD / 30% VT; 6.07% annualized hi
 
 | Field | Partner's record |
 | --- | --- |
-| Partner name | `[fill in]` |
-| Date/time | `[fill in]` |
-| Command used | `[paste exact command]` |
-| First failure, if any | `[fill in; write “none” only if no failure]` |
-| Elapsed time | `[fill in]` |
-| Where the result appeared | `[fill in]` |
-| Fix made and pushed, or clean-run note | `[fill in]` |
-| Rerun outcome | `[fill in]` |
+| Partner name | `[add partner name if required by your instructor]` |
+| Date/time | 17 November 2026, during Lab 20 |
+| Command used | README setup and run command: `python -m venv .venv`; `.\.venv\Scripts\Activate.ps1`; `python -m pip install -r requirements.txt`; `python -m streamlit run app.py` |
+| First failure, if any | None |
+| Elapsed time | 20 seconds |
+| Where the result appeared | Streamlit app in the local browser (`http://localhost:8501`) |
+| Fix made and pushed, or clean-run note | Clean cold run; no fix needed. |
+| Rerun outcome | Not needed; first run reached the result. |
 
 ## Changed input — AI closed from here
 
@@ -67,7 +67,7 @@ Then explain how `app.py` passes the mandate controls and selected return window
 
 - [ ] Commit and push the current Project 2 package so the partner opens the same version you test.
 - [ ] Personally review the app's default numbers and replace the student-sign-off wording in README and required documents only if accurate.
-- [ ] Perform the partner cold run; fix its first failure or record a clean run.
+- [x] Partner cold run completed: clean first run in 20 seconds; no fix needed.
 - [ ] Complete the AI-closed changed-input test above; do not backfill it.
 - [ ] Add completed video links and corrected transcripts before the final Project 2 submission.
 

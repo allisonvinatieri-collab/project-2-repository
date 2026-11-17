@@ -19,7 +19,7 @@ The CPI data card is documented in `Lab_17.md`. CPI is a monitoring signal only;
 | Last-36-month window | A feasible mix may differ because estimates depend on the sample. | 85% BIL / 5% LQD / 10% VT; 6.08% return estimate, 1.48% volatility. Largest change from full sample: 20 points. | Pass; material sensitivity identified |
 | One-point VT estimate reduction | A feasible mix may require more VT and higher volatility. | 66% BIL / 34% VT; 6.04% return estimate, 5.13% volatility. | Pass; estimation risk identified |
 | Point-in-time CPI gate | A CPI release dated after the chosen decision date must be excluded. | On 30 September 2026, September CPI is excluded because its recorded publication date is 14 October 2026. | Pass |
-| Cold run | A clean user can follow the README from a separate folder/environment. | **To complete before submission:** record partner command, first failure, elapsed time, result location, and resolution/limitation. | Open |
+| Cold run | A clean user can follow the README from a separate folder/environment. | On 17 November 2026, a partner followed the README setup/run command, reached the Streamlit app in 20 seconds, and reported no first failure. Result: local Streamlit browser at `http://localhost:8501`; no fix or rerun was needed. | Pass |
 
 ## Material limitations and monitoring
 

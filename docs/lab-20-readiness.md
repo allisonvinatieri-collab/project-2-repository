@@ -23,7 +23,7 @@ Expected default result: 70% BIL / 0% IEF / 0% LQD / 30% VT; 6.07% annualized hi
 
 | Field | Partner's record |
 | --- | --- |
-| Partner name | `[add partner name if required by your instructor]` |
+| Partner name | Catie Moe |
 | Date/time | 17 November 2026, during Lab 20 |
 | Command used | README setup and run command: `python -m venv .venv`; `.\.venv\Scripts\Activate.ps1`; `python -m pip install -r requirements.txt`; `python -m streamlit run app.py` |
 | First failure, if any | None |

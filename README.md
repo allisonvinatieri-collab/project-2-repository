@@ -8,7 +8,7 @@
 
 ## What this app does
 
-The Streamlit app compares an equal-weight baseline, an inverse-volatility baseline, and a 5%-increment long-only constrained allocation across BIL, IEF, LQD, and VT. It tests the historical-return objective and BIL reserve floor, shows a one-input stress run, and displays an inflation-monitoring signal using a dated CPI vintage record.
+The Streamlit app presents a decision-first committee view: an equal-weight baseline, an inverse-volatility baseline, and a 5%-increment long-only constrained allocation across BIL, IEF, LQD, and VT. It tests the net historical-return objective and BIL reserve floor, displays an explicit pilot/rebalancing action, and runs estimate, window, cost, and constraint stresses. Its technical view includes an allocation-robustness map and a point-in-time CPI monitoring signal.
 
 The historical price sample runs from November 2021 through October 2026. Historical estimates are not forecasts.
 
@@ -49,7 +49,7 @@ Open the local URL Streamlit prints. No API keys, network calls, or external dow
 
 ## Data and known limitations
 
-- The price file contains a limited historical sample and has no transaction costs, taxes, liquidity costs, or forward returns.
+- The price file contains a limited historical sample and has no actual transaction costs, taxes, liquidity costs, or forward returns. The app's annual-cost control is an illustrative scenario assumption, not a measured implementation-cost model.
 - The app searches allocations only in 5% increments; it is deliberately transparent, not a production optimizer.
 - CPI is a monitoring signal rather than a return-model input. The app admits an observation only when its recorded publication date is on or before the selected decision date.
 - A pass in the app means only that the stated historical estimate and reserve rule passed. It does not mean the strategy is suitable for investment or will meet its objective.

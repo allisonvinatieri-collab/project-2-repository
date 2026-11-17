@@ -24,7 +24,7 @@ The CPI data card is documented in `Lab_17.md`. CPI is a monitoring signal only;
 ## Material limitations and monitoring
 
 - Historical estimates are not forecasts and are sensitive to the return window.
-- The prototype omits costs, taxes, liquidity constraints, rebalancing mechanics, and forward performance.
+- The prototype uses an illustrative annual-cost stress assumption but omits measured trading costs, taxes, liquidity constraints, rebalancing mechanics, and forward performance.
 - The 5% allocation grid is transparent but does not establish global precision.
 - A failed point-in-time data gate, an infeasible stress case, or material allocation instability triggers committee review.
 

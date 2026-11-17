@@ -12,6 +12,7 @@ Run date: 10 November 2026. Command: `streamlit run app.py`.
 | Return window | All available monthly returns (59) |
 | Return objective | 6.0% annualized historical-return estimate |
 | Reserve-eligible asset and minimum | BIL; 10% minimum weight |
+| Annual implementation-cost assumption | 0.0% |
 | Allocation search | Long only, 5% increments |
 | Point-in-time monitoring date | 30 September 2026 |
 

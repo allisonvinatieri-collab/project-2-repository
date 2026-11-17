@@ -41,15 +41,15 @@ The CPI data card is documented in `Lab_17.md`. CPI is a monitoring signal only;
 
 | Field | Record |
 | --- | --- |
-| Test owner and timestamp | `[your name and local timestamp before run]` |
-| Immutable pre-run commit | `[commit hash created before execution]` |
-| Material input and units | `[e.g., VT annualized historical-return estimate: 8.00% to 7.00%]` |
-| Human-authored AI-off prediction | `[your prediction of allocation, return, risk, and decision effect]` |
-| Expected direction | `[e.g., more VT required / risk rises / becomes infeasible]` |
-| Expected decision effect | `[e.g., pilot recommendation unchanged, or return to committee]` |
-| Execution command and date | `[exact command and date]` |
-| Actual old/new output | `[paste app result, including units]` |
-| Actual decision effect | `[state whether recommendation changed]` |
-| Reconciliation / failure diagnosis | `[explain the match or divergence, including why]` |
+| Test owner and timestamp | Student; 17 November 2026, before execution. |
+| Immutable pre-run commit | `f4f8368` — Record Lab 20 changed-input prediction. |
+| Material input and units | Minimum BIL reserve weight: 10% → 20%. |
+| Human-authored AI-off prediction | Portfolio weight, return estimate, and volatility would increase; feasibility would decrease, meaning fewer allocations meet the rules; the committee decision would remain pilot. |
+| Expected direction | More BIL, higher return estimate, higher volatility, and fewer feasible allocations. |
+| Expected decision effect | Pilot recommendation unchanged. |
+| Execution command and date | `python -m streamlit run app.py`; 17 November 2026. |
+| Actual old/new output | Before and after: 70% BIL / 0% IEF / 0% LQD / 30% VT; 6.07% annualized historical-return estimate; 4.54% annualized volatility; 70% BIL reserve weight. The app found a feasible allocation in both runs; it does not display the number of feasible allocations. |
+| Actual decision effect | No change: pilot, not adopt. |
+| Reconciliation / failure diagnosis | The allocation, return estimate, and volatility did not change because the 20% BIL floor was nonbinding: the selected base allocation already held 70% BIL. The test therefore did not establish whether the number of feasible allocations declined. |
 
 The previously documented one-point VT test is useful sensitivity evidence, but it is **not** presented as a Locked Changed-Input Record because this repository does not yet preserve a verified pre-run, AI-off prediction and immutable pre-run commit for it.

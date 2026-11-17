@@ -43,10 +43,10 @@ Do not ask an AI to select, predict, or interpret this test. Before executing a 
 | **Pre-run — human prediction of number direction** | I predict portfolio weight to increase, return estimate to increase, volatility to increase, and feasibility to decrease, meaning fewer allocations meet the rules. |
 | **Pre-run — expected decision effect** | I expect the committee decision to stay pilot. |
 | **Pre-run — commit and push** | `[commit hash]` |
-| Run command/date | `[fill in after the commit]` |
-| Actual before/after output | `[paste values and units]` |
-| Did the decision change? | `[fill in]` |
-| Why the outcome matched or differed from your prediction | `[your words]` |
+| Run command/date | `python -m streamlit run app.py`; 17 November 2026. |
+| Actual before/after output | Before and after raising the BIL floor from 10% to 20%, the app returned 70% BIL / 0% IEF / 0% LQD / 30% VT; 6.07% annualized historical-return estimate; 4.54% annualized volatility; 70% BIL reserve weight. A feasible allocation appeared in both runs. The app does not display a count of feasible allocations. |
+| Did the decision change? | No. The recommendation remained pilot, not adopt. |
+| Why the outcome matched or differed from your prediction | The prediction did not match the observed allocation and return/risk results. The 20% BIL floor was nonbinding because the selected base allocation already held 70% BIL, so increasing the floor from 10% to 20% did not force a different allocation. |
 
 Afterward, copy the completed record into `docs/validation-and-ai-use.md` so the final submission contains the same evidence.
 

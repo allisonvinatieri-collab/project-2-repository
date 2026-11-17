@@ -38,10 +38,10 @@ Do not ask an AI to select, predict, or interpret this test. Before executing a 
 
 | Field | Record |
 | --- | --- |
-| **Pre-run — input and units** | `[example format only: annualized VT return estimate, 8.0% → 7.0%]` |
-| **Pre-run — why it is load-bearing** | `[your words]` |
-| **Pre-run — human prediction of number direction** | `[your words]` |
-| **Pre-run — expected decision effect** | `[your words]` |
+| **Pre-run — input and units** | Minimum BIL reserve weight: 10% → 20%. |
+| **Pre-run — why it is load-bearing** | The minimum BIL reserve weight is a hard mandate constraint, so it determines which allocations can pass the mandate. |
+| **Pre-run — human prediction of number direction** | I predict portfolio weight to increase, return estimate to increase, volatility to increase, and feasibility to decrease, meaning fewer allocations meet the rules. |
+| **Pre-run — expected decision effect** | I expect the committee decision to stay pilot. |
 | **Pre-run — commit and push** | `[commit hash]` |
 | Run command/date | `[fill in after the commit]` |
 | Actual before/after output | `[paste values and units]` |

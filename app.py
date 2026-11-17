@@ -97,6 +97,68 @@ def render_mix(result):
     reserve_col.metric("BIL reserve weight", f"{result['reserve_weight']:.0%}")
 
 
+def allocation_chart(result):
+    """Return a labeled allocation-composition chart for a feasible portfolio."""
+    if result is None:
+        return None
+    frame = pd.DataFrame(
+        {"Ticker": TICKERS, "Weight": [result["weights"][ticker] for ticker in TICKERS]}
+    ).query("Weight > 0")
+    return (
+        alt.Chart(frame)
+        .mark_arc(innerRadius=52)
+        .encode(
+            theta=alt.Theta("Weight:Q", stack=True),
+            color=alt.Color("Ticker:N", title="Asset", scale=alt.Scale(scheme="tableau10")),
+            tooltip=[alt.Tooltip("Ticker:N"), alt.Tooltip("Weight:Q", format=".0%")],
+        )
+        .properties(height=260, title="Allocation composition")
+    )
+
+
+def risk_return_chart(comparison):
+    """Return a compact risk-return comparison chart for the active portfolios."""
+    return (
+        alt.Chart(comparison)
+        .mark_circle(size=170, opacity=0.9)
+        .encode(
+            x=alt.X("Annualized volatility:Q", title="Annualized volatility", axis=alt.Axis(format="%")),
+            y=alt.Y("Net historical return:Q", title="Net historical return", axis=alt.Axis(format="%")),
+            color=alt.Color("Portfolio:N", title="Portfolio", scale=alt.Scale(scheme="tableau10")),
+            tooltip=[
+                alt.Tooltip("Portfolio:N"),
+                alt.Tooltip("Net historical return:Q", format=".2%"),
+                alt.Tooltip("Annualized volatility:Q", format=".2%"),
+                alt.Tooltip("BIL reserve weight:Q", format=".0%"),
+                alt.Tooltip("Mandate verdict:N"),
+            ],
+        )
+        .properties(height=290, title="Risk and return comparison")
+    )
+
+
+def scenario_chart(scenarios):
+    """Return a visual summary of net historical returns by stress scenario."""
+    chart_data = scenarios.dropna(subset=["Net historical return"])
+    return (
+        alt.Chart(chart_data)
+        .mark_bar(cornerRadiusEnd=4)
+        .encode(
+            x=alt.X("Net historical return:Q", title="Net historical return", axis=alt.Axis(format="%")),
+            y=alt.Y("Scenario:N", sort="-x", title=None),
+            color=alt.Color("Result:N", title="Status", scale=alt.Scale(domain=["Feasible", "Stop / committee review"], range=["#2a9d8f", "#d1495b"])),
+            tooltip=[
+                alt.Tooltip("Scenario:N"),
+                alt.Tooltip("Net historical return:Q", format=".2%"),
+                alt.Tooltip("Volatility:Q", format=".2%"),
+                alt.Tooltip("Allocation:N"),
+                alt.Tooltip("Result:N"),
+            ],
+        )
+        .properties(height=260, title="Stress-scenario return estimates")
+    )
+
+
 def scenario_rows(prices, objective, reserve_floor, annual_cost):
     """Run the pre-specified estimate, window, cost, and constraint stresses."""
     all_sleeves, all_correlation = estimates_from_prices(prices)
@@ -146,6 +208,24 @@ def robustness_map(prices, annual_cost):
 
 def main() -> None:
     st.set_page_config(page_title="Project 2: Portfolio Mandate & Stress-Test Decision System", layout="wide")
+    st.markdown(
+        """
+        <style>
+        .stApp { background: linear-gradient(180deg, #f6f9fc 0%, #ffffff 34%); }
+        [data-testid="stMetric"] {
+            background: #ffffff;
+            border: 1px solid #dce6f0;
+            border-radius: 12px;
+            padding: 12px;
+            box-shadow: 0 2px 8px rgba(31, 57, 83, 0.06);
+        }
+        [data-testid="stSidebar"] { background: #f1f6fb; }
+        h1 { color: #12355b; }
+        h2, h3 { color: #1c4d75; }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
     st.title("Project 2: Portfolio Mandate & Stress-Test Decision System")
     st.caption(
         "AI announcement: Generative AI assisted with code and documentation; the student verified the reported calculations "
@@ -216,7 +296,12 @@ def main() -> None:
             width="stretch",
             hide_index=True,
         )
-        st.bar_chart(comparison.set_index("Portfolio")[["Net historical return", "Annualized volatility"]], width="stretch")
+        comparison_chart_col, allocation_chart_col = st.columns(2)
+        with comparison_chart_col:
+            st.altair_chart(risk_return_chart(comparison), width="stretch")
+        with allocation_chart_col:
+            if optimized is not None:
+                st.altair_chart(allocation_chart(optimized), width="stretch")
 
         left, right = st.columns(2)
         with left:
@@ -242,6 +327,7 @@ def main() -> None:
             width="stretch",
             hide_index=True,
         )
+        st.altair_chart(scenario_chart(scenarios), width="stretch")
         st.caption("The scenario table tests an estimate, sample window, cost, and constraint. “Stop / committee review” is the process stop condition.")
 
     else:

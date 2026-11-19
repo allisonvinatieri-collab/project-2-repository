@@ -4,7 +4,7 @@
 
 ## Committee decision
 
-**Recommendation: pilot, not adopt.** The constrained allocation can meet the classroom historical-return and BIL-reserve rules, but the allocation changes when the estimation window changes. Do not allocate capital until the return objective, reserve definition, implementation costs, and robustness criteria are approved. See [the decision memo](docs/decision-memo.md).
+**Recommendation: adopt the app as a controlled decision-support workflow; pilot, do not adopt the allocation.** The constrained allocation can meet the classroom historical-return and BIL-reserve rules, but the allocation changes when the estimation window changes. Do not allocate capital until the return objective, reserve definition, implementation costs, and robustness criteria are approved. See [the decision memo](docs/decision-memo.md).
 
 ## What this app does
 
@@ -36,6 +36,7 @@ Open the local URL Streamlit prints. No API keys, network calls, or external dow
 | `Lab_15_prices.csv` | Monthly adjusted-price input for BIL, IEF, LQD, and VT. |
 | `ALFRED_CPIAUCSL_vintages.csv` | Dated CPI vintage record for the point-in-time monitoring gate. |
 | `docs/decision-memo.md` | Committee recommendation and conditions. |
+| `docs/committee-adoption-brief.md` | Defensible design choices, rejected alternatives, and committee adoption boundary. |
 | `docs/validation-and-ai-use.md` | Data, validation, limitations, AI-use record, and Locked Changed-Input Record. |
 | `docs/visible-output.md` | Executed default-run inputs and results viewable without starting the app. |
 | `docs/transcript-video-*.txt` | Complete recording scripts for the three required videos; use them while recording and retain the final spoken transcripts. |

@@ -4,9 +4,9 @@
 
 ## Committee ask and recommendation
 
-**Ask:** authorize a limited pilot only after the mandate owner approves the return objective, reserve definition, and implementation assumptions.
+**Ask:** adopt the application as a controlled pre-trade decision-support workflow and authorize a limited pilot only after the mandate owner approves the return objective, reserve definition, and implementation assumptions.
 
-**Recommendation:** **pilot, not adopt and not allocate capital yet.** The app's constrained historical estimate meets the displayed classroom rules, but it is sensitive to the estimation window and omits material real-world inputs. A pilot should begin at **0% investable allocation** until the validation conditions below are satisfied; any later allocation range must be set by the mandate owner after costs, liquidity, and a forward test are documented.
+**Recommendation:** **adopt the workflow; pilot, do not adopt the allocation and do not allocate capital yet.** The app's constrained historical estimate meets the displayed classroom rules, but it is sensitive to the estimation window and omits material real-world inputs. A pilot should begin at **0% investable allocation** until the validation conditions below are satisfied; any later allocation range must be set by the mandate owner after costs, liquidity, and a forward test are documented.
 
 ## Mandate and current result
 

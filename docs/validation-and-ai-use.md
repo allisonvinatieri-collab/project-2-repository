@@ -21,6 +21,10 @@ The CPI data card is documented in `Lab_17.md`. CPI is a monitoring signal only;
 | Point-in-time CPI gate | A CPI release dated after the chosen decision date must be excluded. | On 30 September 2026, September CPI is excluded because its recorded publication date is 14 October 2026. | Pass |
 | Cold run | A clean user can follow the README from a separate folder/environment. | On 17 November 2026, a partner followed the README setup/run command, reached the Streamlit app in 2 minutes 30 seconds, and reported no first failure. Result: local Streamlit browser at `http://localhost:8501`; no fix or rerun was needed. | Pass |
 
+## Final-engine verification catch
+
+The earlier draft documentation reported a one-point VT return-estimate stress allocation of 66% BIL / 34% VT. That result cannot come from the final engine because `lowest_risk_mix` searches in 5% allocation increments. Re-running the final engine against the committed price file produced 65% BIL / 35% VT, a 6.11% net return estimate, and 5.28% volatility. The test suite now locks that known answer and the memo and visible-output record were corrected. This is an example of checking a generated or drafted claim against the actual decision engine instead of accepting it on appearance.
+
 ## Material limitations and monitoring
 
 - Historical estimates are not forecasts and are sensitive to the return window.

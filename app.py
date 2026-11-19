@@ -262,6 +262,10 @@ def main() -> None:
 
     if view == "Committee view":
         st.subheader("Committee decision")
+        st.info(
+            "Workflow decision: adopt this app as a transparent, controlled decision-support prototype. "
+            "Capital decision: do not adopt the allocation or deploy capital until the stated validation conditions are met."
+        )
         if optimized is None:
             st.error("Action: stop and return to committee review. No feasible allocation meets the active mandate.")
         else:

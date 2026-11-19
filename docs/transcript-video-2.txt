@@ -16,6 +16,8 @@ Open a terminal in the repository root and run `python -m unittest discover -s t
 
 For the final 5%-increment engine, reducing the annualized VT return estimate by one percentage point changes the selected allocation to 65% BIL and 35% VT. The resulting net return estimate is 6.11% and volatility is 5.28%. This is the engine result used in the memo and visible-output record.
 
+This test also documents a verification catch. An earlier draft stated 66% BIL and 34% VT for that scenario. I checked it against the final 5%-increment engine and recognized that 66% and 34% are impossible weights in a 5% grid. The actual engine result is the 65% and 35% allocation I just showed. I corrected the documentation and added a regression test so the mismatch cannot return unnoticed.
+
 The engine checks the price CSV schema, order of dates, duplicate dates, and missing values before calculating monthly returns, annualized arithmetic mean returns, annualized volatility, and correlations. The source limitation is explicit: the committed sample is a limited historical sample and is not independently vendor-verified by this app.
 
 Open `Lab_15_portfolio.py`. In `estimates_from_prices`, point out that the program requires `Date` as the first column, parses the dates, requires dates to be oldest first, and rejects duplicate dates or missing values. It converts monthly prices to monthly percentage returns, computes each asset’s arithmetic annualized return as average monthly return times 12, computes volatility as monthly standard deviation times the square root of 12, and computes the correlation matrix from those monthly returns.

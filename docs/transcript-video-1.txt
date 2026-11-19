@@ -4,7 +4,7 @@ Recording setup: have the Streamlit browser window open by running `streamlit ru
 
 Generative AI assisted with code and documentation. I verified the reported calculations and own the analysis and decision. This is education, not investment advice.
 
-This is my Project 2 Portfolio Mandate and Stress-Test Decision System. My committee recommendation is pilot, not adopt. The current investable allocation is zero until the mandate owner approves the forward-looking return objective, the BIL reserve definition, implementation costs, and robustness criteria.
+This is my Project 2 Portfolio Mandate and Stress-Test Decision System. My recommendation has two layers. First, a committee can adopt this application as a controlled decision-support workflow because its assumptions, constraints, data limits, and stress results are visible. Second, the committee should pilot but not adopt the displayed allocation, so the current investable allocation is zero until the mandate owner approves the forward-looking return objective, the BIL reserve definition, implementation costs, and robustness criteria.
 
 The app uses the committed monthly adjusted-price sample for BIL, IEF, LQD, and VT from November 2021 through October 2026. The active mandate is a 6.0% net annualized historical-return objective, a 10% minimum BIL reserve weight, and a 0.0% annual implementation-cost assumption. The search is long only and evaluates allocations in 5% increments.
 
@@ -20,4 +20,4 @@ The most important sensitivity is the return window. When the sample changes to 
 
 The decision remains pilot, not adopt because the result is sensitive to the estimation window and because costs, liquidity, taxes, rebalancing, and forward performance are not modeled. I review the pilot at every month-end and return it to committee review within five business days if a stress has no feasible allocation, a sleeve changes by 20 percentage points or more across approved windows, BIL falls below the approved floor, or point-in-time data control fails.
 
-Pause on the decision banner and finish by restating the action: pilot, not adopt; no capital allocation until the mandate owner approves the forward-looking objective, reserve definition, implementation-cost assumption, liquidity policy, and robustness criteria.
+Pause on the decision banner and finish by restating the action: adopt the workflow as transparent decision support; pilot, do not adopt the allocation; and make no capital allocation until the mandate owner approves the forward-looking objective, reserve definition, implementation-cost assumption, liquidity policy, and robustness criteria.

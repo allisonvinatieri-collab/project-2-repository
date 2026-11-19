@@ -54,7 +54,7 @@ The earlier draft documentation reported a one-point VT return-estimate stress a
 | Expected decision effect | Pilot recommendation unchanged. |
 | Execution command and date | `python -m streamlit run app.py`; 17 November 2026. |
 | Actual old/new output | Before and after: 70% BIL / 0% IEF / 0% LQD / 30% VT; 6.07% annualized historical-return estimate; 4.54% annualized volatility; 70% BIL reserve weight. The app found a feasible allocation in both runs; it does not display the number of feasible allocations. |
-| Actual decision effect | No change: pilot, not adopt. |
+| Actual decision effect | No change: adopt the workflow for controlled analysis; do not deploy capital into the allocation. |
 | Reconciliation / failure diagnosis | The allocation, return estimate, and volatility did not change because the 20% BIL floor was nonbinding: the selected base allocation already held 70% BIL. The test therefore did not establish whether the number of feasible allocations declined. |
 
 The previously documented one-point VT test is useful sensitivity evidence, but it is **not** presented as a Locked Changed-Input Record because this repository does not yet preserve a verified pre-run, AI-off prediction and immutable pre-run commit for it.

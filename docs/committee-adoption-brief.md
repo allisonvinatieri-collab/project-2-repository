@@ -17,7 +17,7 @@ A committee can adopt this application as a controlled, transparent decision-sup
 
 ## Verification discipline
 
-The final engine uses 5% increments. A prior draft stated a 66% BIL / 34% VT one-point stress result, which is impossible under that grid. The final-engine rerun produced 65% BIL / 35% VT, and the automated known-answer test now prevents that mismatch from returning. This is the specific check that should be discussed in the defense video: the documented result was tested against the actual engine rather than accepted as AI-generated text.
+The final engine uses 5% increments. A prior draft stated a 66% BIL / 34% VT one-point stress result, which is impossible under that grid. The final-engine rerun produced 65% BIL / 35% VT, and the automated known-answer test now prevents that mismatch from returning. This is the specific check discussed in Video 1: the documented result was tested against the actual engine rather than accepted as AI-generated text.
 
 ## What a committee receives
 

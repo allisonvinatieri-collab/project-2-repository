@@ -30,4 +30,4 @@ The constrained portfolio is 70% BIL, 0% IEF, 0% LQD, and 30% VT.
 
 - Reducing the VT annualized historical-return estimate by one percentage point yields 65% BIL / 0% IEF / 0% LQD / 35% VT, a 6.11% return estimate, and 5.28% volatility. The weights are constrained to 5% increments.
 - For a 30 September 2026 decision date, the point-in-time CPI gate admits the August 2026 CPI value (334.131), published on 11 September 2026, and excludes the September observation because it was published on 14 October 2026.
-- Recommendation: **pilot, not adopt**. See [the decision memo](decision-memo.md) for the conditions and reversal triggers.
+- Recommendation: **adopt the controlled decision-support workflow; do not deploy capital into the allocation.** See [the decision memo](decision-memo.md) for the sensitivity range, conditions, and reversal triggers.

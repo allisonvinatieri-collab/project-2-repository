@@ -17,7 +17,7 @@ python -m pip install -r requirements.txt
 python -m streamlit run app.py
 ```
 
-Expected default result: 70% BIL / 0% IEF / 0% LQD / 30% VT; 6.07% annualized historical-return estimate; 4.54% volatility; 70% BIL reserve weight; decision: **pilot, not adopt**.
+Expected default result: 70% BIL / 0% IEF / 0% LQD / 30% VT; 6.07% annualized historical-return estimate; 4.54% volatility; 70% BIL reserve weight; decision: **adopt the workflow for controlled analysis; do not deploy capital into the allocation**.
 
 ### Partner cold-run note — completed in class
 
@@ -45,7 +45,7 @@ Do not ask an AI to select, predict, or interpret this test. Before executing a 
 | **Pre-run — commit and push** | `f4f8368` — Record Lab 20 changed-input prediction. |
 | Run command/date | `python -m streamlit run app.py`; 17 November 2026. |
 | Actual before/after output | Before and after raising the BIL floor from 10% to 20%, the app returned 70% BIL / 0% IEF / 0% LQD / 30% VT; 6.07% annualized historical-return estimate; 4.54% annualized volatility; 70% BIL reserve weight. A feasible allocation appeared in both runs. The app does not display a count of feasible allocations. |
-| Did the decision change? | No. The recommendation remained pilot, not adopt. |
+| Did the decision change? | No. The no-capital allocation action remained unchanged; the workflow remains suitable for controlled analysis. |
 | Why the outcome matched or differed from your prediction | The prediction did not match the observed allocation and return/risk results. The 20% BIL floor was nonbinding because the selected base allocation already held 70% BIL, so increasing the floor from 10% to 20% did not force a different allocation. |
 
 Afterward, copy the completed record into `docs/validation-and-ai-use.md` so the final submission contains the same evidence.

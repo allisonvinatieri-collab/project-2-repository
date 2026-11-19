@@ -6,7 +6,7 @@
 
 **Ask:** adopt the application as a controlled pre-trade decision-support workflow and authorize a limited pilot only after the mandate owner approves the return objective, reserve definition, and implementation assumptions.
 
-**Recommendation:** **adopt the workflow; pilot, do not adopt the allocation and do not allocate capital yet.** The app's constrained historical estimate meets the displayed classroom rules, but it is sensitive to the estimation window and omits material real-world inputs. A pilot should begin at **0% investable allocation** until the validation conditions below are satisfied; any later allocation range must be set by the mandate owner after costs, liquidity, and a forward test are documented.
+**Recommendation:** **adopt the workflow; pilot, do not adopt the allocation and do not allocate capital yet.** The app's constrained historical estimate meets the displayed classroom rules, but it is sensitive to the estimation window and omits material real-world inputs. A pilot begins at **0% investable allocation** until the validation conditions below are satisfied. The sensitivity envelope below is an analytical range for a future approved paper or controlled pilot; it is not capital-allocation authority.
 
 ## Mandate and current result
 
@@ -22,6 +22,17 @@
 | Rule verdict | Passes the stated historical-return and BIL-reserve rules. |
 
 The equal-weight and inverse-volatility baselines are displayed alongside the constrained portfolio in `app.py`. They make the central limitation visible: neither baseline clears the 6.0% historical-return objective under the supplied sample, while the constrained search is selected precisely at the feasibility boundary.
+
+## Allocation range, not false point precision
+
+| Sleeve | Sensitivity envelope | Evidence in the named cases |
+| --- | ---: | --- |
+| BIL | 60%–85% | Base 70%; one-point VT stress 65%; last-36-month window 85%; two-point VT and cost stresses 60%. |
+| IEF | 0% | Zero in the selected named cases. |
+| LQD | 0%–5% | Last-36-month window selects 5%; other named cases select zero. |
+| VT | 10%–40% | Last-36-month window 10%; base 30%; one-point VT stress 35%; two-point VT and cost stresses 40%. |
+
+The current investable range is therefore **0% capital deployment**. The table is a model-sensitivity range only; using it for a funded pilot requires the conditions below.
 
 ## Evidence and stress result
 

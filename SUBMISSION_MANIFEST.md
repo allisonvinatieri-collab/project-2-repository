@@ -1,5 +1,7 @@
 # Project 2 Submission Manifest
 
+For the Brightspace-ready manifest with stable repository links and the required video/timestamp fields, use [docs/brightspace-manifest.md](docs/brightspace-manifest.md). It becomes final only after the three real YouTube URLs, final durations, and timestamps are entered.
+
 ## Reproducible application package
 
 | Artifact | Location | Verification |

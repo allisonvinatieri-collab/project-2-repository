@@ -369,6 +369,17 @@ def main() -> None:
         st.dataframe(robustness, width="stretch", hide_index=True)
 
         st.subheader("Point-in-time inflation monitoring signal")
+        with st.expander("CPI data card and availability rule"):
+            st.markdown(
+                "**Source:** Federal Reserve Bank of St. Louis FRED series CPIAUCSL; underlying producer: "
+                "U.S. Bureau of Labor Statistics.  \n"
+                "**Measure and units:** Consumer Price Index for All Urban Consumers: All Items, seasonally adjusted; "
+                "index (1982–84 = 100), monthly.  \n"
+                "**As-of control:** an observation is eligible only when its recorded publication date is on or before "
+                "the selected decision date.  \n"
+                "**Limitation:** the included ALFRED table is a documented monitoring record, not a complete production "
+                "vintage database; CPI is not an optimizer input."
+            )
         cpi = load_cpi_vintages()
         as_of = st.date_input("Decision date for CPI availability", value=pd.Timestamp("2026-09-30").date())
         available = cpi.loc[cpi["Published on"].dt.date <= as_of].sort_values("Published on")

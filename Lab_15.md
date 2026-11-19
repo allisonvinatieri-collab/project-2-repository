@@ -64,15 +64,15 @@ I lowered the VT annualized return estimate by one percentage point while retain
 
 | Ticker | Weight |
 |---|---:|
-| BIL | 66% |
+| BIL | 65% |
 | IEF | 0% |
 | LQD | 0% |
-| VT | 34% |
+| VT | 35% |
 
-- Annualized historical return estimate under the changed estimate: **6.04%**
-- Annualized volatility: **5.13%**
+- Annualized historical return estimate under the changed estimate: **6.11%**
+- Annualized volatility: **5.28%**
 
-**Conclusion:** the answer survives this one-point change, but it needs 4 more percentage points in VT and volatility rises by 0.59 percentage points. This is a classroom historical-data exercise, not investment advice.
+**Conclusion:** the answer survives this one-point change, but it needs 5 more percentage points in VT and volatility rises by 0.73 percentage points. This is a classroom historical-data exercise, not investment advice.
 
 ## Partner attack
 

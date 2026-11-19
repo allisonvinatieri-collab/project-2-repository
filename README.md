@@ -34,12 +34,15 @@ Open the local URL Streamlit prints. No API keys, network calls, or external dow
 | `Lab_15_portfolio.py` | Historical-estimate and constrained-search engine. |
 | `lab_14_portfolio.py` | Portfolio math and baseline-weight functions. |
 | `Lab_15_prices.csv` | Monthly adjusted-price input for BIL, IEF, LQD, and VT. |
+| `docs/price-data-card.md` | Price-input provenance boundary, fields, and limitations. |
 | `ALFRED_CPIAUCSL_vintages.csv` | Dated CPI vintage record for the point-in-time monitoring gate. |
 | `docs/decision-memo.md` | Committee recommendation and conditions. |
 | `docs/committee-adoption-brief.md` | Defensible design choices, rejected alternatives, and committee adoption boundary. |
 | `docs/validation-and-ai-use.md` | Data, validation, limitations, AI-use record, and Locked Changed-Input Record. |
 | `docs/visible-output.md` | Executed default-run inputs and results viewable without starting the app. |
 | `docs/transcript-video-*.txt` | Complete recording scripts for the three required videos; use them while recording and retain the final spoken transcripts. |
+| `docs/video-recording-guide.md` | Required on-screen sequence, video limits, and upload checks. |
+| `docs/brightspace-manifest.md` | Final submission manifest; add the three actual YouTube URLs, titles, durations, and final timestamps after recording. |
 | `tests/test_project2.py` | Automated regression and data-control tests for the final engine. |
 | `SUBMISSION_MANIFEST.md` | Required-artifact checklist and final submission map. |
 

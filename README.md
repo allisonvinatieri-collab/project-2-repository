@@ -56,7 +56,7 @@ Open the local URL Streamlit prints. No API keys, network calls, or external dow
 
 ## Data and known limitations
 
-- The price file contains a limited historical sample and has no actual transaction costs, taxes, liquidity costs, or forward returns. The app's annual-cost control is an illustrative scenario assumption, not a measured implementation-cost model.
+- The committed price file was retrieved through `Lab_15_download_prices.py` from Yahoo Finance's monthly adjusted-close (`adjclose`) endpoint. It is a limited historical sample and does not retain the original request timestamp or independently audited adjustment methodology. It also has no actual transaction costs, taxes, liquidity costs, or forward returns. The app's annual-cost control is an illustrative scenario assumption, not a measured implementation-cost model.
 - The app searches allocations only in 5% increments; it is deliberately transparent, not a production optimizer.
 - CPI is a monitoring signal rather than a return-model input. The app admits an observation only when its recorded publication date is on or before the selected decision date.
 - A pass in the app means only that the stated historical estimate and reserve rule passed. It does not mean the strategy is suitable for investment or will meet its objective.

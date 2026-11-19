@@ -6,7 +6,7 @@
 
 | Input | Source / as-of boundary | Control | Limitation |
 | --- | --- | --- | --- |
-| `Lab_15_prices.csv` | Included monthly adjusted-price sample, November 2021–October 2026. | CSV schema, monotonic-date, duplicate-date, and missing-value checks run in `estimates_from_prices`. | The stored file is a limited historical sample; the app does not independently verify the vendor or adjustment methodology. |
+| `Lab_15_prices.csv` | Yahoo Finance monthly adjusted-close (`adjclose`) sample for BIL, IEF, LQD, and VT, retrieved by `Lab_15_download_prices.py`; November 2021–October 2026. | CSV schema, monotonic-date, duplicate-date, and missing-value checks run in `estimates_from_prices`. | The static CSV does not retain the original request timestamp, and the app does not independently audit the vendor's adjustment methodology. |
 | `ALFRED_CPIAUCSL_vintages.csv` | CPIAUCSL/FRED-ALFRED record downloaded 29 October 2026; publication dates are stored with observations. | The app includes only rows published on or before the selected decision date. | The supplied vintage table is a documented monitoring record, not a complete production vintage database. |
 
 The CPI data card is documented in `Lab_17.md`. CPI is a monitoring signal only; it is not used to estimate portfolio returns or select weights.

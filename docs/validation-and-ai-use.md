@@ -20,6 +20,7 @@ The CPI data card is documented in `Lab_17.md`. CPI is a monitoring signal only;
 | One-point VT estimate reduction | A feasible mix may require more VT and higher volatility. | 65% BIL / 35% VT; 6.11% return estimate, 5.28% volatility. | Pass; estimation risk identified |
 | Point-in-time CPI gate | A CPI release dated after the chosen decision date must be excluded. | On 30 September 2026, September CPI is excluded because its recorded publication date is 14 October 2026. | Pass |
 | Cold run | A clean user can follow the README from a separate folder/environment. | On 17 November 2026, a partner followed the README setup/run command, reached the Streamlit app in 2 minutes 30 seconds, and reported no first failure. Result: local Streamlit browser at `http://localhost:8501`; no fix or rerun was needed. | Pass |
+| Fresh-clone cold run | A newly cloned repository with a new virtual environment can install pinned dependencies, reproduce the known answers, and start the app. | On 19 November 2026, a fresh clone of commit `df221f6` was created in a separate temporary folder. A new Python 3.14 virtual environment installed `requirements.txt`; `python -m unittest discover -s tests -v` passed all five tests; `python -m streamlit run app.py --server.headless true --server.port 8522` started successfully and served the local app. | Pass |
 
 ## Final-engine verification catch
 

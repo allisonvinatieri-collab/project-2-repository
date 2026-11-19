@@ -6,7 +6,7 @@ Audit basis: the course [Project 2 brief](https://github.com/CinderZhang/FIN4390
 
 | Requirement | Evidence in this repository | Status |
 | --- | --- | --- |
-| Runnable Python web app a stranger can operate from the README | `app.py`, `README.md`, `requirements.txt`, and partner cold-run record in `docs/lab-20-readiness.md` | Complete |
+| Runnable Python web app a stranger can operate from the README | `app.py`, `README.md`, `requirements.txt`, partner cold-run record in `docs/lab-20-readiness.md`, and a fresh-clone cold run in `docs/validation-and-ai-use.md` | Complete |
 | Mandate: objective, universe, benchmark, risk measure, and limits | `README.md`, `docs/decision-memo.md`, and Technical detail view in `app.py` | Complete |
 | Equal-weight baseline, second transparent baseline, constrained portfolio, and verdicts | Committee view in `app.py`: equal weight, inverse volatility, and constrained search with pass/fail rule text | Complete |
 | Point-in-time signal with data card | CPI availability panel and in-app data-card expander; `Lab_17.md` and `docs/price-data-card.md` | Complete |

@@ -1,6 +1,6 @@
 # Project 2 Submission Manifest
 
-For the Brightspace-ready manifest with stable repository links and the required video/timestamp fields, use [docs/brightspace-manifest.md](docs/brightspace-manifest.md). It becomes final only after the three real YouTube URLs, final durations, and timestamps are entered.
+For the final Brightspace-ready manifest with stable repository links, video URLs, durations, and timestamp evidence, use [docs/brightspace-manifest.md](docs/brightspace-manifest.md).
 
 ## Reproducible application package
 
@@ -13,7 +13,7 @@ For the Brightspace-ready manifest with stable repository links and the required
 | Point-in-time CPI input | `ALFRED_CPIAUCSL_vintages.csv` | Publication-date gate is tested. |
 | Dependencies | `requirements.txt` | Pinned runtime dependencies. |
 | Instructions and headline result | `README.md` | Includes clean-environment setup, test, run, and expected result. |
-| Tests | `tests/test_project2.py` | Run with `python -m unittest discover -s tests -v`; 5 tests passed on 17 November 2026. |
+| Tests | `tests/test_project2.py` | Run with `python -m unittest discover -s tests -v`; 5 tests passed on 20 November 2026. |
 
 ## Decision and audit record
 
@@ -32,6 +32,6 @@ For the Brightspace-ready manifest with stable repository links and the required
 - Partner cold run recorded as clean on 17 November 2026.
 - Locked changed-input record includes its immutable pre-run commit `f4f8368`.
 
-## Items that require the student's own recorded evidence
+## Recorded-evidence status
 
-The three course videos cannot be created or attested by repository code. Before submitting, record them with the student's face visible, add their actual hosted links or files to this manifest, and replace the three transcript files with the spoken transcripts. Video 3 must open with the live Streamlit app, change a bounded driver, state the 20-percentage-point / five-business-day reversal trigger, and show the result.
+The final Brightspace manifest contains all three hosted YouTube links, final durations, timestamp indexes, and links to the corrected transcripts. Video 3 opens with the live Streamlit app, changes the bounded VT-return driver, states the 20-percentage-point / five-business-day reversal trigger, and shows the result.

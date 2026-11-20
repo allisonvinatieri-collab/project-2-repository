@@ -25,7 +25,7 @@ Audit basis: the course [Project 2 brief](https://github.com/CinderZhang/FIN4390
 | Correction of a checked AI/draft output | The impossible 66%/34% result is documented, corrected to 65%/35%, and regression-tested | Complete |
 | Decision memo in Markdown | `docs/decision-memo.md` | Complete |
 | Validation record in Markdown | `docs/validation-and-ai-use.md` | Complete |
-| Three distinct video scripts within course time limits | `docs/transcript-video-1.txt` (about 301 spoken words; 2:17 recorded), `transcript-video-2.txt` (about 428), and `transcript-video-3.txt` (about 391) | Video 1 recorded; Videos 2–3 ready to record |
+| Three distinct video scripts within course time limits | `docs/transcript-video-1.txt` (about 301 spoken words; 2:17 recorded), `transcript-video-2.txt` (about 486 spoken words; 4:47 recorded), and `transcript-video-3.txt` (about 391) | Videos 1–2 recorded; Video 3 ready to record |
 | Brightspace evidence manifest | `docs/brightspace-manifest.md` | Ready; final URLs, durations, and timestamps require the actual recordings |
 
 ## Final student-owned completion steps
